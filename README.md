@@ -1,5 +1,7 @@
 # sidebar
 Simple side menu that opens with the button for screens smaller than 992px.
+- [demo](http://studio42.wz.cz/sidebar/)
+
 ## > 992px
 <img src="https://user-images.githubusercontent.com/94744070/169554903-23e285a1-ef43-4cfd-8816-d659d54ac48a.png" width="500">
 
