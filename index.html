@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Sidebar</title>
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        #list-margin {
+            padding-left: 30px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            #sidebar-menu {
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background: rgb(248,249,250);
+                overflow-x: hidden;
+                transition: .5s;
+                padding-top: 50px;                
+                height: 100%;
+            }
+            
+            #sidebar-btn-left {
+                text-align: right!important;
+                padding-right: 20px
+            }             
+        }        
+    </style>    
+</head>
+<body>
+    <div id="sidebar-btn-left">
+        <button id="sidebar-btn" class="navbar-toggler d-lg-none"  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="openNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.6em" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>            
+        </button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-2">
+                <div id="sidebar-menu"">
+                    <nav class="navbar navbar-light bg-light">
+                    <div>    
+                        <div id="list-margin">
+                            <ul class="navbar-nav" style="flex-direction: column;">
+                                <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Link1</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link1</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link2</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link3</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link4</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link5</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">Link6</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <p>CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT CONTENT</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("sidebar-menu").style.width = "300px";
+            document.getElementById("sidebar-btn").onclick = closeNav;
+        }
+        function closeNav() {
+            document.getElementById("sidebar-menu").style.width = "0";
+            document.getElementById("sidebar-btn").onclick = openNav;
+        }
+    </script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
